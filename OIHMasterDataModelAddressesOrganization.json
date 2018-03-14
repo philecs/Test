@@ -1,0 +1,90 @@
+{
+  "oihUid":"abc",
+  "oihCreated":3,
+  "oihLastModified":4,
+  "oihApplicationRecords":[
+     {
+        "applicationUid":"def",
+        "recordUid":"hello",
+        "created":5,
+        "lastModified":8
+     },
+     {
+        "applicationUid":"ghi",
+        "recordUid":"olleh",
+        "created":3,
+        "lastModified":7
+     }
+  ],
+  "organizationName": "",
+  "createdAt": "Mr.",
+  "updatedAt": "Philipp",
+  "logo": "",
+  "address": [
+    {
+      "street": "Badorfer Str.",
+      "streetNumber": 79,
+      "unit": "",
+      "zipCode": "50321",
+      "city": "Bruehl",
+      "district": "Badorf",
+      "region": "NRW",
+      "country": "Germany",
+      "countryCode": "DE",
+      "primaryContact":"Philipp Hoegner",
+      "addressType": "residential address"
+    }
+  ],
+  "phone": [
+    {
+    "phoneNumber": "0123456789",
+      "type": "business",
+      "category": "primary",
+      "messenger": [
+        "WhatsApp",
+        "QQ"
+      ],
+      "isTextPhone": false,
+      "textingEnabled": true
+    }
+  ],
+  "fax": [
+    {
+      "faxNumber": "987456321",
+      "type": "business",
+      "category": "secondary"
+    }
+  ],
+  "email":[
+    {
+      "email": "philipp.hoegner@cloudecosystem.org",
+      "type": "business",
+      "category": "primary"
+    }
+  ],
+  "social": [
+    {
+      "network": ["Facebook", "Xing"],
+      "userIdentifier": "philllll",
+      "type": "business"
+    }
+  ],
+  "url": [
+    {
+      "url": "http://www.openintegrationhub.de",
+      "urlType": "website"
+    }
+  ],
+  "organiztationCategory": [
+    {
+      "organizationGroup": "customer",
+      "abcType": "a"
+    },
+    {
+      "organizationGroup": "supplier",
+      "abcType": ""
+    }
+  ]
+  "personToOrganizationRelationship":[],
+  "supervisor": []
+}
