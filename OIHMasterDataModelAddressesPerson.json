@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "",
+  "title": "Person",
+  "description": "Describes a natural person",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
+    }
+  ],
+  "properties": {
+    "title":
+    {
+      "type": "string",
+      "enum": ["Prof.", "Prof.Dr.", "Dr.", "Dr.Dr.", "Prof.Dr.Dr.", "Ing.", "Dipl.Ing", "Mag.", "Ph.D."],
+      "description": "Title of the person",
+      "examples": [
+        "Dr."
+      ]
+    },
+    "salutation":
+    {
+      "type": "string",
+      "description": "Salutation of the person",
+      "examples": [
+        "Mr."
+      ]
+    },
+    "fistName":
+    {
+      "type": "string",
+      "description": "Given name of the person",
+      "examples": [
+        "Max"
+      ]
+    },
+    "middleName":
+    {
+      "type": "string",
+      "description": "Middle name of the person",
+      "examples": [
+        "Schneider"
+      ]
+    },
+    "lastName":
+    {
+      "type": "string",
+      "description": "Surname of the person",
+      "examples": [
+        "Schneider"
+      ]
+    },
+    "gender":
+    {
+      "type": "string",
+      "enum": ["male", "female", "intersexual"],
+      "description": "Gender of the person"
+    },
+    "birthday":
+    {
+      "type": "string",
+      "format": "date-time",
+      "description": "Birthday of the person"
+    },
+    "notes":
+    {
+      "type": "string",
+      "description": "Individual notes for the person"
+    },
+    "createdAt":
+    {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation date-time of the person data set"
+    },
+    "updatedAt":
+    {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last modification date-time of the person data set"
+    },
+    "displayName":
+    {
+      "type": "string",
+      "description": "Displayed name for the person within the application",
+      "examples": [
+        "mscheinder",
+        "heNiha"
+      ]
+    },
+    "tags":
+    {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owner":
+    {
+      "type": "string",
+      "description": "Creator/owner of the data set of the person",
+      "examples": [
+        "Herbert Hermann",
+        "Silke Schaefer"
+      ]
+    },
+    "language":
+    {
+      "type": "string",
+      "description": "First language of the person"
+    },
+    "nickname":
+    {
+      "type": "string",
+      "description": "Nickname of the person",
+      "examples": [
+        "maxschn",
+        "silSchaef"
+      ]
+    },
+    "calendar":
+    {
+      "type": "string",
+      "format": "uri",
+      "description": "URI to the calendar of the person",
+      "examples": [
+        "http://cal.example.com/calA"
+      ]
+    },
+    "requestCalendar":
+    {
+      "type": "string",
+      "format": "uri",
+      "description": "URI to request an appointment with the person",
+      "examples": [
+        "janedoe@example.com"
+      ]
+    },
+    "busyCalendar":
+    {
+      "type": "string",
+      "format": "uri",
+      "description": "URI to get see when the person is available/blocked",
+      "examples": [
+        "http://www.example.com/busy/janedoe"
+      ]
+    },
+    "photo":
+    {
+      "type": "string",
+      "format": "uri",
+      "description": "Photo related to the person",
+      "examples": [
+        "http://example.org/photo.jpg"
+      ]
+    },
+    "anniversary":
+    {
+      "type": "string",
+      "format": "date-time",
+      "description": "Anniversary of the person"
+    },
+    "email":
+    {
+      "type": "array",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses.json#definitions/email"
+      }
+    },
+    "social":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses.json#definitions/social"
+      }
+    },
+    "phone":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses#definitions/phone"
+      }
+    },
+    "url":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses#definitions/url"
+      }
+    },
+    "fax":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses#definitions/fax"
+      }
+    },
+    "address":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses#definitions/address"
+      }
+    },
+    "personToOrganizationRelationship":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses#definitions/personToOrganizationRelationship"
+      }
+    },
+    "supervisor":
+    {
+      "type": "array",
+      "description": "Social media accounts of the person",
+      "items": {
+        "$ref": "SharedDefinitionsAddresses#definitions/supervisor"
+      }
+    }
+  },
+  "additionalProperties": false
+}
