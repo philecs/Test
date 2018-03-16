@@ -1,44 +1,86 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesPerson.json",
-  "title": "PersonToOrganizationRelationship",
+  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesRelation.json",
+  "title": "Relationship",
   "description": "Describes the relationship between a person and an organization",
   "type": "object",
-  "allOf": [
+  "anyOf": [
     {
-      "$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
+      "$ref": "#/definitions/PersonToOrganizationRelationship"
+    },
+    {
+      "$ref": "#/definitions/PersonToPersonRelationshipRelation"
+    },
+    {
+      "$ref": "#/definitions/OrganizationToOrganizationRelationship"
     }
   ],
   "properties": {
     "relationshipType": {
       "type": "string",
-      "description": "Describes the relationship between a person and an organization",
+      "description": "Describes the type of relationship",
       "examples": [
         "employee",
         "founder"
       ]
+    }
+  },
+  "definitions":{
+    "PersonToOrganizationRelationship":{
+      "type": "object",
+      "description": "Describes the relationship between a person and an organization",
+      "properties": {
+        "function": {
+          "type": "string",
+          "description": "Function of the person within the organization",
+          "examples": [
+            "Software architect"
+          ]
+        },
+        "department": {
+          "type": "string",
+          "description": "Department the person works at",
+          "examples": [
+            "sales"
+          ]
+        },
+        "organizationUid": {
+          "type": "string",
+          "description": "Unique identifier of the organization"
+        },
+        "personUid": {
+          "type": "string",
+          "description": "Unique identifier of the person"
+        }
+      }
     },
-    "function": {
-      "type": "string",
-      "description": "Function of the person within the organization",
-      "examples": [
-        "Software architect"
-      ]
+    "PersonToPersonRelationship": {
+      "type": "object",
+      "description": "Describes the relationship between two persons",
+      "properties": {
+        "personUid": {
+          "type": "string",
+          "description": "Unique identifier of the first person"
+        },
+        "personUid2": {
+          "type": "string",
+          "description": "Unique identifier of the second person"
+        }
+      }
     },
-    "department": {
-      "type": "string",
-      "description": "Department the person works at",
-      "examples": [
-        "sales"
-      ]
-    },
-    "organizationUid": {
-      "type": "string",
-      "description": "Unique identifier of the organization"
-    },
-    "personUid": {
-      "type": "string",
-      "description": "Unique identifier of the person"
+    "OrganizationToOrganizationRelationship": {
+      "type": "object",
+      "description": "Describes the relationship between two organizations",
+      "properties": {
+        "organizationUid": {
+          "type": "string",
+          "description": "Unique identifier of the first organization"
+        },
+        "organizationUid2": {
+          "type": "string",
+          "description": "Unique identifier of the second organization"
+        }
+      }
     }
   }
 }
