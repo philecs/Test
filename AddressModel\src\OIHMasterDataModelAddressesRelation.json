@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://github.com/philecs/philecs/blob/master/OIHMasterDataModelAddressesPerson.json",
+  "title": "PersonToOrganizationRelationship",
+  "description": "Describes the relationship between a person and an organization",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "http://openintegrationhub.org/schemas/oih-data-record.json"
+    }
+  ],
+  "properties": {
+    "relationshipType": {
+      "type": "string",
+      "description": "Describes the relationship between a person and an organization",
+      "examples": [
+        "employee",
+        "founder"
+      ]
+    },
+    "function": {
+      "type": "string",
+      "description": "Function of the person within the organization",
+      "examples": [
+        "Software architect"
+      ]
+    },
+    "department": {
+      "type": "string",
+      "description": "Department the person works at",
+      "examples": [
+        "sales"
+      ]
+    },
+    "organizationUid": {
+      "type": "string",
+      "description": "Unique identifier of the organization"
+    },
+    "personUid": {
+      "type": "string",
+      "description": "Unique identifier of the person"
+    }
+  }
+}
