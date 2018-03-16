@@ -9,7 +9,7 @@
       "$ref": "#/definitions/PersonToOrganizationRelationship"
     },
     {
-      "$ref": "#/definitions/PersonToPersonRelationshipRelation"
+      "$ref": "#/definitions/PersonToPersonRelationship"
     },
     {
       "$ref": "#/definitions/OrganizationToOrganizationRelationship"
