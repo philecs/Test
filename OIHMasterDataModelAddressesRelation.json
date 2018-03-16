@@ -15,16 +15,6 @@
       "$ref": "#/definitions/OrganizationToOrganizationRelationship"
     }
   ],
-  "properties": {
-    "relationshipType": {
-      "type": "string",
-      "description": "Describes the type of relationship",
-      "examples": [
-        "employee",
-        "founder"
-      ]
-    }
-  },
   "definitions":{
     "PersonToOrganizationRelationship":{
       "type": "object",
@@ -81,6 +71,16 @@
           "description": "Unique identifier of the second organization"
         }
       }
+    }
+  },
+  "properties": {
+    "relationshipType": {
+      "type": "string",
+      "description": "Describes the type of relationship",
+      "examples": [
+        "employee",
+        "founder"
+      ]
     }
   }
 }
